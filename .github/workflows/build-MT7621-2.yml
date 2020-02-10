@@ -1,4 +1,4 @@
-name: Build newifi+all
+name: Build newifi+2usb
 on:
   push:
     branches: 
@@ -93,8 +93,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config #集成caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
         echo "CONFIG_FIRMWARE_ENABLE_USB=y" >> .config
         echo "CONFIG_FIRMWARE_ENABLE_UFSD=y" >> .config
-        echo "CONFIG_FIRMWARE_ENABLE_SWAP=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_HID=y" >> .config
+        echo "CONFIG_FIRMWARE_ENABLE_SWAP=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_HID=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_FTPD=y" >> .config
@@ -102,7 +102,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SERIAL=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_AUDIO=y" >> .config
         ####################################################################################
