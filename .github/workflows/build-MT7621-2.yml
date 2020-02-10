@@ -3,7 +3,7 @@ name: Build MT7621-2
 on:
   push:
     branches: 
-      - master1
+      - master
 
 jobs:
   build:
