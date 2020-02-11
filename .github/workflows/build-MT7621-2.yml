@@ -70,7 +70,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HTTPS/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SERIAL/d' .config #Include USB-Serial modules (e.g. pl2303). ~0.03MB
         sed -i '/CONFIG_FIRMWARE_INCLUDE_AUDIO/d' .config #Include USB-Audio modules ~0.46MB
-        sed -i '/ONFIG_FIRMWARE_INCLUDE_TRANSMISSION/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL/d' .config
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
@@ -107,8 +107,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SERIAL=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_AUDIO=y" >> .config
-        cho "ONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config
-        cho "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config
         ####################################################################################
         sed -i "s/^CONFIG_TOOLCHAIN_DIR=.*$/CONFIG_TOOLCHAIN_DIR=${CONFIG_TOOLCHAIN_DIR}/g" .config
         sudo ./clear_tree_simple
