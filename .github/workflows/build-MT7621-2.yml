@@ -108,7 +108,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SERIAL=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_AUDIO=y" >> .config
         cho "ONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y" >> .config
-        cho "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL" >> .config
+        cho "CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y" >> .config
         ####################################################################################
         sed -i "s/^CONFIG_TOOLCHAIN_DIR=.*$/CONFIG_TOOLCHAIN_DIR=${CONFIG_TOOLCHAIN_DIR}/g" .config
         sudo ./clear_tree_simple
