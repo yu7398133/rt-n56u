@@ -72,7 +72,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_AUDIO/d' .config #Include USB-Audio modules ~0.46MB
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL/d' .config
-        ed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' .config
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config #MENTOHUST
         echo "CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER=n" >> .config #SOFTETHERVPN
